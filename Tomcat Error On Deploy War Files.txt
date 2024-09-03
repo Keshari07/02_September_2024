@@ -1,0 +1,263 @@
+ username=sambauser,password=1234 //10.248.0.92/SharedFolder /opt/tomcat/webapps/
+ 
+ 
+ 
+ //10.248.0.92/SharedFolder /opt/tomcat/webapps/ cifs username=sambauser,password=1234 0 0
+
+
+30-Aug-2024 16:25:07.912 WARNING [Catalina-utility-2] org.apache.tomcat.util.scan.StandardJarScanner.scan Failed to scan JAR [war:file:/opt/tomcat/webapps/DvdmsA.war*/WEB-INF/lib/org.eclipse.core.jobs_3.8.0.v20160509-0411.jar] from /WEB-INF/lib
+        java.nio.file.NoSuchFileException: /opt/tomcat/webapps/DvdmsA.war
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+30-Aug-2024 16:25:07.913 WARNING [Catalina-utility-2] org.apache.tomcat.util.scan.StandardJarScanner.scan Failed to scan JAR [war:file:/opt/tomcat/webapps/DvdmsA.war*/WEB-INF/lib/org.eclipse.core.runtime_3.12.0.v20160606-1342.jar] from /WEB-INF/lib
+        java.nio.file.NoSuchFileException: /opt/tomcat/webapps/DvdmsA.war
+                at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+                at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+                at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+                at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+                at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+                at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+                at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+                at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+                at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+                at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+                at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:92)
+                at org.apache.tomcat.util.scan.JarFileUrlNestedJar.<init>(JarFileUrlNestedJar.java:39)
+                at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:47)
+                at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:387)
+                at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:196)
+                at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+                at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+                at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+                at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4438)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+                at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+                at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+                at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:603)
+                at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1014)
+                at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1866)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+                at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+                at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:816)
+                at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+                at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1633)
+                at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+                at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+                at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+                at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+                at java.base/java.lang.Thread.run(Thread.java:829)
+30-Aug-2024 16:25:07.913 WARNING [Catalina-utility-2] org.apache.tomcat.util.scan.StandardJarScanner.scan Failed to scan JAR [war:file:/opt/tomcat/webapps/DvdmsA.war*/WEB-INF/lib/org.eclipse.datatools.enablement.ibm.informix_1.1.0.201603142002.jar] from /WEB-INF/lib
+        java.nio.file.NoSuchFileException: /opt/tomcat/webapps/DvdmsA.war
+                at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+                at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+                at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+                at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+                at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+                at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+                at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+                at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+                at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+                at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+                at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:92)
+                at org.apache.tomcat.util.scan.JarFileUrlNestedJar.<init>(JarFileUrlNestedJar.java:39)
+                at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:47)
+                at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:387)
+                at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:196)
+                at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+                at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+                at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+                at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4438)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+                at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+                at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+                at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:603)
+                at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1014)
+                at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1866)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+                at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+                at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:816)
+                at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+                at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1633)
+                at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+                at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+                at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+                at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+                at java.base/java.lang.Thread.run(Thread.java:829)
+30-Aug-2024 16:25:07.913 WARNING [Catalina-utility-2] org.apache.tomcat.util.scan.StandardJarScanner.scan Failed to scan JAR [war:file:/opt/tomcat/webapps/DvdmsA.war*/WEB-INF/lib/org.apache.commons.logging_1.1.1.v201101211721.jar] from /WEB-INF/lib
+        java.nio.file.NoSuchFileException: /opt/tomcat/webapps/DvdmsA.war
+                at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+                at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+                at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+                at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+                at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+                at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+                at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+                at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+                at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+                at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+                at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:92)
+                at org.apache.tomcat.util.scan.JarFileUrlNestedJar.<init>(JarFileUrlNestedJar.java:39)
+                at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:47)
+                at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:387)
+                at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:196)
+                at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+                at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+                at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+                at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4438)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+                at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+                at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+                at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:603)
+                at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1014)
+                at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1866)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+                at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+                at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:816)
+                at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+                at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1633)
+                at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+                at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+                at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+                at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+                at java.base/java.lang.Thread.run(Thread.java:829)
+30-Aug-2024 16:25:07.913 WARNING [Catalina-utility-2] org.apache.tomcat.util.scan.StandardJarScanner.scan Failed to scan JAR [war:file:/opt/tomcat/webapps/DvdmsA.war*/WEB-INF/lib/org.eclipse.datatools.enablement.ibm.db2.luw.dbdefinition_1.1.0.201603142002.jar] from /WEB-INF/lib
+        java.nio.file.NoSuchFileException: /opt/tomcat/webapps/DvdmsA.war
+                at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+                at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+                at java.base/sun.nio.fs.UnixFileAttributeViews$Basic.readAttributes(UnixFileAttributeViews.java:55)
+                at java.base/sun.nio.fs.UnixFileSystemProvider.readAttributes(UnixFileSystemProvider.java:149)
+                at java.base/sun.nio.fs.LinuxFileSystemProvider.readAttributes(LinuxFileSystemProvider.java:99)
+                at java.base/java.nio.file.Files.readAttributes(Files.java:1764)
+                at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1420)
+                at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:841)
+                at java.base/java.util.zip.ZipFile$CleanableResource$FinalizableResource.<init>(ZipFile.java:867)
+                at java.base/java.util.zip.ZipFile$CleanableResource.get(ZipFile.java:856)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:258)
+                at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:187)
+                at java.base/java.util.jar.JarFile.<init>(JarFile.java:348)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.<init>(URLJarFile.java:103)
+                at java.base/sun.net.www.protocol.jar.URLJarFile.getJarFile(URLJarFile.java:72)
+                at java.base/sun.net.www.protocol.jar.JarFileFactory.get(JarFileFactory.java:99)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.connect(JarURLConnection.java:125)
+                at java.base/sun.net.www.protocol.jar.JarURLConnection.getJarFile(JarURLConnection.java:92)
+                at org.apache.tomcat.util.scan.JarFileUrlNestedJar.<init>(JarFileUrlNestedJar.java:39)
+                at org.apache.tomcat.util.scan.JarFactory.newInstance(JarFactory.java:47)
+                at org.apache.tomcat.util.scan.StandardJarScanner.process(StandardJarScanner.java:387)
+                at org.apache.tomcat.util.scan.StandardJarScanner.scan(StandardJarScanner.java:196)
+                at org.apache.jasper.servlet.TldScanner.scanJars(TldScanner.java:262)
+                at org.apache.jasper.servlet.TldScanner.scan(TldScanner.java:104)
+                at org.apache.jasper.servlet.JasperInitializer.onStartup(JasperInitializer.java:83)
+                at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4438)
+                at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164)
+                at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:599)
+                at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:571)
+                at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:603)
+                at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:1014)
+                at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1866)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+                at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+                at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+                at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:816)
+                at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:468)
+                at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1633)
+                at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:308)
+                at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:109)
+                at org.apache.catalina.core.ContainerBase.backgroundProcess(ContainerBase.java:973)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1172)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1176)
+                at org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1154)
+                at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+                at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+                at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+                at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+                at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+                at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+                at java.base/java.lang.Thread.run(Thread.java:829)
+30-Aug-2024 16:25:07.914 WARNING [Catalina-utility-2] org.apache.tomcat.util.scan.StandardJarScanner.scan Failed to scan JAR [war:file:/opt/tomcat/webapps/DvdmsA.war*/WEB-INF/lib/javax.wsdl_1.5.1.v201012040544.jar] from /WEB-INF/lib
+        java.nio.file.NoSuchFileException: /opt/tomcat/webapps/DvdmsA.war
+
+
+
+C:\Users\acer\Desktop\Sham_F\CRUD_PROJECT\.metadata\.plugins\org.eclipse.jdt.core

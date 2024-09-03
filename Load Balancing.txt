@@ -1,0 +1,44 @@
+Docker Networking _ Bridge vs Host vs Overlay 
+Docker Volumes and Bind Mounts_Persistent Storage for Docker
+
+
+[Mon Aug 19 12:20:20.407234 2024] [proxy_http:error] [pid 9433:tid 134837738407488] [client 10.248.1.64:29047] AH01114: HTTP: failed to make connection to backend: 192.168.80.22
+[Mon Aug 19 12:20:23.527223 2024] [proxy:error] [pid 9433:tid 134837717435968] (113)No route to host: AH00957: http: attempt to connect to 192.168.80.22:8080 (192.168.80.22) failed
+[Mon Aug 19 12:20:23.527304 2024] [proxy:error] [pid 9433:tid 134837717435968] AH00959: ap_proxy_connect_backend disabling worker for (192.168.80.22) for 60s
+[Mon Aug 19 12:20:23.527314 2024] [proxy_http:error] [pid 9433:tid 134837717435968] [client 10.248.1.64:29048] AH01114: HTTP: failed to make connection to backend: 192.168.80.22, referer: http://10.248.0.93/DvdmsArunachal/
+[Mon Aug 19 12:20:26.527491 2024] [proxy:error] [pid 9433:tid 134837717435968] (113)No route to host: AH00957: http: attempt to connect to 192.168.80.30:8080 (192.168.80.30) failed
+[Mon Aug 19 12:20:26.527540 2024] [proxy:error] [pid 9433:tid 134837717435968] AH00959: ap_proxy_connect_backend disabling worker for (192.168.80.30) for 60s
+[Mon Aug 19 12:20:26.527545 2024] [proxy_http:error] [pid 9433:tid 134837717435968] [client 10.248.1.64:29048] AH01114: HTTP: failed to make connection to backend: 192.168.80.30, referer: http://10.248.0.93/DvdmsArunachal/
+[Mon Aug 19 12:23:06.464418 2024] [mpm_event:notice] [pid 9431:tid 134837772953472] AH00492: caught SIGWINCH, shutting down gracefully
+[Mon Aug 19 12:23:06.581672 2024] [mpm_event:notice] [pid 9552:tid 125263660902272] AH00489: Apache/2.4.52 (Ubuntu) OpenSSL/3.0.2 mod_wsgi/4.9.0 Python/3.10 configured -- resuming normal operations
+[Mon Aug 19 12:23:06.581785 2024] [core:notice] [pid 9552:tid 125263660902272] AH00094: Command line: '/usr/sbin/apache2'
+
+
+Job for apache2.service failed because the control process exited with error code.
+See "systemctl status apache2.service" and "journalctl -xeu apache2.service" for details.
+
+    ServerAdmin webmaster@srv.world
+    DocumentRoot /var/www/html
+    ServerName www.mycompany.com
+    ProxyRequests off
+
+    <Location /balancer-manager>
+        SetHandler balancer-manager
+        Require all granted
+    </Location>
+
+    ProxyPass /balancer-manager
+    ProxyPass / balancer://mycluster/ stickysession=SESSION_ID
+
+    <Proxy balancer://mycluster>
+        BalancerMember "http://10.248.0.90"
+        BalancerMember "http://10.248.0.91"
+        ProxySet lbmethod=byrequests
+    </Proxy>
+</VirtualHost>
+
+
+
+/opt/tomcat/apache-tomcat-9.0.93/conf/webapps/DvdmsArunachal
+
+<Context path="/DvdmsArunachal" docBase="/opt/tomcat/apache-tomcat-9.0.93/conf/webapps/DvdmsArunachal" />

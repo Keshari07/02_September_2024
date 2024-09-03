@@ -1,0 +1,96 @@
+smsmin@isms01:/opt/tomcat$ history
+    1  clear
+    2  ip addr
+    3  exit
+    4  pwd
+    5  apt-get update
+    6  sudo apt-get update
+    7  sudo apt-get upgrade
+    8  sudo apt install openjdk-17-jdk openjdk-17-jre
+    9  java -version
+   10  update-java-alternatives -l
+   11  sudo update-alternatives --config java
+   12  sudo nano /etc/environment
+   13  sudo source /etc/environment
+   14  sudo vi /etc/environment
+   15  source /etc/environment
+   16  echo $JAVA_HOME
+   17  sudo apt update
+   18  sudo apt install gnupg2 wget vim
+   19  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+   20  curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+   21  sudo apt update
+   22  sudo apt install postgresql-16 postgresql-contrib-16
+   23  sudo systemctl start postgresql
+   24  sudo systemctl enable postgresql
+   25  psql --version
+   26  sudo vi /etc/postgresql/16/main/postgresql.conf
+   27  sudo sed -i '/^host/s/ident/md5/' /etc/postgresql/16/main/pg_hba.conf
+   28  sudo sed -i '/^local/s/peer/trust/' /etc/postgresql/16/main/pg_hba.conf
+   29  echo "host all all 0.0.0.0/0 md5" | sudo tee -a /etc/postgresql/16/main/pg_hba.conf
+   30  sudo systemctl restart postgresql
+   31  sudo ufw allow 5432/tcp
+   32  sudo -u postgres psql
+   33  sudo apt update
+   34  sudo apt upgrade -y
+   35  sudo useradd -r -m -U -d /opt/tomcat -s /bin/false tomcat
+   36  wget https://downloads.apache.org/tomcat/tomcat-10/v10.1.10/bin/apache-tomcat-10.1.10.tar.gz
+   37  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.18/bin/apache-tomcat-10.1.18.tar.gz
+   38  sudo tar xzf apache-tomcat-*.tar.gz -C /opt/tomcat
+   39  sudo chown -R tomcat: /opt/tomcat
+   40  sudo sh -c 'chmod +x /opt/tomcat/bin/*.sh
+   41  sudo vi /etc/systemd/system/tomcat.service
+   42  sudo systemctl daemon-reload
+   43  sudo systemctl start tomcat
+   44  sudo vi /etc/systemd/system/tomcat.service
+   45  sudo systemctl start tomcat
+   46  sudo vi /etc/systemd/system/tomcat.service
+   47  sudo systemctl daemon-reload
+   48  sudo systemctl start tomcat
+   49  sudo systemctl status tomcat
+   50  sudo update-java-alternatives -l
+   51  sudo vi /etc/systemd/system/tomcat.service
+   52  sudo nano /opt/tomcat/conf/tomcat-users.xml
+   53  sudo vi /opt/tomcat/conf/tomcat-users.xml
+   54  sudo update
+   55  sudo apt-update
+   56  sudo apt-get update
+   57  telnet google.com 443
+   58  sudo apt-get update
+   59  sudo apt-get upgrade
+   60  passwd
+   61  exit
+   62  sudo chown -R tomcat:tomcat /opt/tomcat/
+   63  sudo chmod -R u+x /opt/tomcat/bin
+   64  cd /opt/tomcat/
+   65  sudo chmod 777 tomcat/*
+   66  cd /opt/
+   67  ls
+   68  sudo chmod 777 tomcat/*
+   69  sudo chmod 777 /tomcat/*
+   70  sudo chown -R tomcat:tomcat /opt/tomcat/
+   71  sudo chmod -R u+x /opt/tomcat/bin
+   72  ls
+   73  cd tomcat/
+   74  sudo chmod 777 tomcat/
+   75  ls
+   76  cd tomcat/
+   77  ls
+   78  cd
+   79  cd /opt/tomcat/
+   80  sudo rm apache-tomcat-10.1.18/
+   81  sudo rm apache-tomcat-10.1.18
+   82  cd
+   83  cd /tmp
+   84  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.18/bin/apache-tomcat-10.1.18.tar.gz
+   85  sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
+   86  sudo chown -R tomcat:tomcat /opt/tomcat/
+   87  sudo chmod -R u+x /opt/tomcat/bin
+   88  cd ..
+   89  sudo systemctl daemon-reload
+   90  sudo systemctl start tomcat
+   91  sudo systemctl status tomcat
+   92  sudo systemctl enable tomcat
+   93  sudo ufw allow 8080
+   94  cd /opt/tomcat/
+
